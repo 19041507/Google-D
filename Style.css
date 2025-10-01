@@ -1,0 +1,319 @@
+/* Reseta as margens e paddings e define a fonte */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #202124;
+    transition: background-color 0.3s ease;
+}
+
+/* Deixar o cabeçalho no estilo */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 10px; 
+}
+
+.top-nav a {
+    color: #212121;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.top-nav a:hover, .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.app-menu-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+    fill: #474747; 
+    border-radius: 50%;
+    padding: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.app-menu-icon:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.profile-pic:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.logo-container {
+    margin-bottom: 28px;
+}
+
+.google-logo {
+    width: 272px;
+    height: 92px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 584px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    box-shadow: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    height: 44px;
+    padding: 0 15px;
+}
+
+.search-bar:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.search-buttons {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-buttons button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.search-buttons button:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #f2f2f2;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-country {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: #1F1F1F;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.footer-links-left,
+.footer-links-right {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Adicionando um espaçamento à esquerda para alinhar com o texto de cima */
+.footer-links-left {
+    padding-left: 8px; 
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1F1F1F;
+}
+
+/* =================================================================== */
+/* ESTILOS ATUALIZADOS PARA ÍCONES E BOTÃO MODO IA                     */
+/* =================================================================== */
+
+.ai-toggle-hidden { display: none; }
+
+/* Estilo para o novo ícone de lupa SVG */
+.search-icon-svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    fill: #9aa0a6; /* COR ATUALIZADA */
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+/* Estilo geral para os ícones SVG da direita (teclado, voz, lens) */
+.right-icons .icon-svg {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    fill: #474747; /* COR ATUALIZADA */
+}
+
+.ai-mode-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Remover o background-color e border daqui para que o pseudo-elemento atue como fundo */
+    /* background-color: #F1F3F4; */
+    /* border: 1px solid transparent; */
+    border-radius: 18px;
+    padding: 6px 12px 6px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3c4043;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    user-select: none;
+    position: relative; /* Necessário para o pseudo-elemento do gradiente */
+    z-index: 1; /* Garante que o conteúdo fique sobre o gradiente */
+    /* Remover overflow: hidden daqui, o pseudo-elemento já terá suas próprias bordas */
+
+    /* Adicionar um fundo transparente para que o gradiente do ::before apareça */
+    background-color: transparent; 
+}
+
+/* Pseudo-elemento para criar a borda gradiente */
+.ai-mode-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Gradiente com as cores do Google */
+    background: linear-gradient(90deg, #4285F4, #DB4437, #F4B400, #0F9D58);
+    z-index: -1; /* Fica atrás do conteúdo */
+    border-radius: 18px;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease-in-out;
+    background-size: 200% 200%; /* Para animar o gradiente */
+    animation: gradient-animation 4s ease infinite;
+
+    /* Aumenta o tamanho do pseudo-elemento para que ele se projete como uma borda */
+    padding: 1px; /* Espessura da borda gradiente */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Pseudo-elemento para o fundo interno do botão, que vai "cobrir" o gradiente no centro */
+.ai-mode-label::after {
+    content: '';
+    position: absolute;
+    top: 1px; /* 1px para cada lado para formar a borda */
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background-color: #F1F3F4; /* Fundo cinza claro */
+    border-radius: 17px; /* Levemente menor para manter o arredondamento */
+    z-index: -1; /* Fica entre o gradiente e o conteúdo */
+    transition: background-color 0.2s ease;
+    opacity: 0; /* Começa invisível, só aparece com o hover do pai */
+}
+
+
+/* Animação do gradiente */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Mostra o gradiente ao passar o mouse */
+.ai-mode-label:hover::before {
+    opacity: 1; /* Mostra a camada do gradiente */
+}
+
+/* Mostra o fundo interno ao passar o mouse */
+.ai-mode-label:hover::after {
+    background-color: #E8EAED; /* Fundo mais escuro no hover */
+    opacity: 1; /* Mostra o fundo interno */
+}
+
+
+.ai-mode-label .ai-icon {
+    width: 20px;
+    height: 20px;
+    fill: #1f1f1f; /* COR ATUALIZADA */
+}
+
+#ai-toggle-checkbox:checked ~ main .ai-mode-label {
+    background-color: #E8F0FE;
+    /* Remover a borda padrão para não conflitar com o gradiente */
+    border: none; 
+    color: #1967D2;
+}
+
+/* Quando o modo IA está ativo, o fundo interno também deve mudar */
+#ai-toggle-checkbox:checked ~ main .ai-mode-label::after {
+    background-color: #E8F0FE; /* Fundo azul claro para o modo IA */
+}
+
+
+/* Muda a cor de preenchimento do SVG quando o modo IA está ativo */
+#ai-toggle-checkbox:checked ~ main .ai-mode-label .ai-icon {
+    fill: #1967D2;
+}
